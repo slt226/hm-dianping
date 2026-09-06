@@ -1,0 +1,1044 @@
+2026-08-27 14:25:23.065  INFO 5628 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 5628 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 14:25:23.074 DEBUG 5628 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 14:25:23.074  INFO 5628 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 14:25:23.898  INFO 5628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 14:25:23.909  INFO 5628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 14:25:23.959  INFO 5628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+2026-08-27 14:25:24.870  INFO 5628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 14:25:24.883  INFO 5628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 14:25:24.883  INFO 5628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 14:25:25.022  INFO 5628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 14:25:25.024  INFO 5628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1886 ms
+2026-08-27 14:25:26.510  INFO 5628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 14:25:26.885  INFO 5628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 14:25:27.518  INFO 5628 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 14:25:28.074  INFO 5628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 14:25:28.436  INFO 5628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 14:25:28.437  INFO 5628 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 14:25:28.515  INFO 5628 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2b9d4b0:0/SimpleConnection@559c4e06 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 58729]
+2026-08-27 14:25:28.591  INFO 5628 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 6.012 seconds (JVM running for 6.544)
+2026-08-27 14:26:53.968  INFO 5628 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 14:26:53.968  INFO 5628 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 14:26:53.973  INFO 5628 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-08-27 14:27:05.307 DEBUG 5628 --- [http-nio-8081-exec-6] com.hmdp.service.impl.UserServiceImpl    : 发送短信验证码成功,验证码为957261
+2026-08-27 14:38:56.765  WARN 5628 --- [http-nio-8081-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2026-08-27 14:39:01.487  WARN 5628 --- [http-nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2026-08-27 14:43:03.292  INFO 20116 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 20116 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 14:43:03.296 DEBUG 20116 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 14:43:03.298  INFO 20116 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 14:43:04.427  INFO 20116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 14:43:04.432  INFO 20116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 14:43:04.503  INFO 20116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 Redis repository interfaces.
+2026-08-27 14:43:05.697  INFO 20116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2026-08-27 14:43:05.720  INFO 20116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 14:43:05.721  INFO 20116 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 14:43:05.884  INFO 20116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 14:43:05.885  INFO 20116 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2498 ms
+2026-08-27 14:43:07.686  INFO 20116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 14:43:07.943  INFO 20116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 14:43:09.590  INFO 20116 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 14:43:10.234  INFO 20116 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 14:43:10.845  INFO 20116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 64741 (http) with context path ''
+2026-08-27 14:43:10.849  INFO 20116 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 14:43:10.981  INFO 20116 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1b25d695:0/SimpleConnection@47d81427 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 64742]
+2026-08-27 14:43:11.057  INFO 20116 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 8.498 seconds (JVM running for 9.113)
+2026-08-27 14:46:34.661  INFO 7692 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 7692 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 14:46:34.665 DEBUG 7692 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 14:46:34.666  INFO 7692 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 14:46:35.878  INFO 7692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 14:46:35.885  INFO 7692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 14:46:35.965  INFO 7692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 0 Redis repository interfaces.
+2026-08-27 14:46:37.204  INFO 7692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 14:46:37.230  INFO 7692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 14:46:37.231  INFO 7692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 14:46:37.417  INFO 7692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 14:46:37.418  INFO 7692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2649 ms
+2026-08-27 14:46:39.250  INFO 7692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 14:46:39.544  INFO 7692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 14:46:41.114  INFO 7692 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 14:46:41.821  INFO 7692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 14:46:42.408  INFO 7692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 14:46:42.412  INFO 7692 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 14:46:42.511  INFO 7692 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1e258d3b:0/SimpleConnection@4de93edd [delegate=amqp://guest@127.0.0.1:5672/, localPort= 61709]
+2026-08-27 14:46:42.578  INFO 7692 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 8.635 seconds (JVM running for 9.37)
+2026-08-27 14:46:49.013  INFO 7692 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 14:46:49.027  INFO 7692 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 14:46:49.028  INFO 7692 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-27 14:49:12.645 ERROR 7692 --- [http-nio-8081-exec-6] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 14:49:14.836 ERROR 7692 --- [http-nio-8081-exec-9] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 14:49:17.987 ERROR 7692 --- [http-nio-8081-exec-10] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 14:49:20.140 ERROR 7692 --- [http-nio-8081-exec-2] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 14:49:26.474 ERROR 7692 --- [http-nio-8081-exec-7] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 15:04:05.537  WARN 7692 --- [http-nio-8081-exec-6] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:05.593  WARN 7692 --- [http-nio-8081-exec-7] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:05.594  WARN 7692 --- [http-nio-8081-exec-3] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:05.594  WARN 7692 --- [http-nio-8081-exec-2] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:05.602  WARN 7692 --- [http-nio-8081-exec-2] com.hmdp.service.impl.ShopServiceImpl    : queryWithMutex: 抢锁异常，降级直查DB | id=1 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:05.622  WARN 7692 --- [http-nio-8081-exec-1] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:11.003  WARN 7692 --- [http-nio-8081-exec-4] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:11.006 ERROR 7692 --- [http-nio-8081-exec-4] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 15:04:14.682  WARN 7692 --- [http-nio-8081-exec-5] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:04:14.692 ERROR 7692 --- [http-nio-8081-exec-5] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 15:09:48.959  WARN 7692 --- [http-nio-8081-exec-10] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:09:48.959  WARN 7692 --- [http-nio-8081-exec-8] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:09:48.963  WARN 7692 --- [http-nio-8081-exec-8] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:09:49.708  WARN 7692 --- [http-nio-8081-exec-9] com.hmdp.utils.RefreshTokenInterceptor   : RefreshTokenInterceptor: Redis续期失败（忽略） | key=login:token:a4e613555a2a4c1ea65762796ea2ba81 | err=org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2026-08-27 15:09:49.710 ERROR 7692 --- [http-nio-8081-exec-9] com.hmdp.config.WebExceptionAdvice       : org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214) ~[spring-core-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:693) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125) ~[spring-web-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	... 47 common frames omitted
+
+2026-08-27 15:10:33.598  INFO 13252 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 13252 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 15:10:33.601 DEBUG 13252 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 15:10:33.601  INFO 13252 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 15:10:34.321  INFO 13252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 15:10:34.324  INFO 13252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 15:10:34.357  INFO 13252 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2026-08-27 15:10:35.174  INFO 13252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 15:10:35.189  INFO 13252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 15:10:35.190  INFO 13252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 15:10:35.286  INFO 13252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 15:10:35.286  INFO 13252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1623 ms
+2026-08-27 15:10:36.426  INFO 13252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 15:10:36.648  INFO 13252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 15:10:37.175 ERROR 13252 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热失败
+
+org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:54) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:52) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:275) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.convertLettuceAccessException(LettuceStringCommands.java:799) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.set(LettuceStringCommands.java:148) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:287) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.set(DefaultStringRedisConnection.java:974) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.DefaultValueOperations$3.inRedis(DefaultValueOperations.java:240) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:60) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:228) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:236) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at com.hmdp.service.impl.VoucherServiceImpl.initSeckillStock(VoucherServiceImpl.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1791) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at com.hmdp.HmDianPingApplication.main(HmDianPingApplication.java:12) ~[classes/:na]
+Caused by: io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+	at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:135) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:108) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.AsyncCommand.completeResult(AsyncCommand.java:118) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.AsyncCommand.complete(AsyncCommand.java:109) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:686) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:646) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:597) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-08-27 15:10:37.670  INFO 13252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:10:37.997  WARN 13252 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2026-08-27 15:10:37.998  INFO 13252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:10:38.003  INFO 13252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 15:10:38.006  INFO 13252 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 15:10:38.128  INFO 13252 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-27 15:10:38.138  INFO 13252 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-08-27 15:10:38.153 ERROR 13252 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-08-27 15:11:03.601  INFO 19128 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 19128 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 15:11:03.604 DEBUG 19128 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 15:11:03.604  INFO 19128 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 15:11:04.230  INFO 19128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 15:11:04.230  INFO 19128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 15:11:04.266  INFO 19128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2026-08-27 15:11:04.860  INFO 19128 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 15:11:04.875  INFO 19128 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 15:11:04.875  INFO 19128 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 15:11:04.955  INFO 19128 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 15:11:04.955  INFO 19128 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1304 ms
+2026-08-27 15:11:05.925  INFO 19128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 15:11:06.132  INFO 19128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 15:11:06.654 ERROR 19128 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热失败
+
+org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:54) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:52) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:275) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.convertLettuceAccessException(LettuceStringCommands.java:799) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.lettuce.LettuceStringCommands.set(LettuceStringCommands.java:148) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.set(DefaultedRedisConnection.java:287) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.set(DefaultStringRedisConnection.java:974) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.DefaultValueOperations$3.inRedis(DefaultValueOperations.java:240) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:60) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:228) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:236) ~[spring-data-redis-2.3.9.RELEASE.jar:2.3.9.RELEASE]
+	at com.hmdp.service.impl.VoucherServiceImpl.initSeckillStock(VoucherServiceImpl.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1791) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:521) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.15.RELEASE.jar:5.2.15.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:402) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1247) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1236) ~[spring-boot-2.3.12.RELEASE.jar:2.3.12.RELEASE]
+	at com.hmdp.HmDianPingApplication.main(HmDianPingApplication.java:12) ~[classes/:na]
+Caused by: io.lettuce.core.RedisCommandExecutionException: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+	at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:135) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:108) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.AsyncCommand.completeResult(AsyncCommand.java:118) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.AsyncCommand.complete(AsyncCommand.java:109) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:686) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:646) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:597) ~[lettuce-core-5.3.7.RELEASE.jar:5.3.7.RELEASE]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.65.Final.jar:4.1.65.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2026-08-27 15:11:07.036  INFO 19128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:11:07.336  WARN 19128 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2026-08-27 15:11:07.344  INFO 19128 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:11:07.345  INFO 19128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 15:11:07.352  INFO 19128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 15:11:07.485  INFO 19128 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-27 15:11:07.495  INFO 19128 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-08-27 15:11:07.496 ERROR 19128 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2026-08-27 15:18:35.238  INFO 11728 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 11728 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 15:18:35.241 DEBUG 11728 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 15:18:35.241  INFO 11728 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 15:18:35.855  INFO 11728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 15:18:35.858  INFO 11728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 15:18:35.890  INFO 11728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2026-08-27 15:18:36.536  INFO 11728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 15:18:36.550  INFO 11728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 15:18:36.551  INFO 11728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 15:18:36.637  INFO 11728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 15:18:36.637  INFO 11728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1342 ms
+2026-08-27 15:18:37.637  INFO 11728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 15:18:37.841  INFO 11728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 15:18:38.312  INFO 11728 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 15:18:38.754  INFO 11728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:18:39.063  INFO 11728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 15:18:39.065  INFO 11728 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 15:18:39.121  INFO 11728 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1d806de6:0/SimpleConnection@3b8b4846 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 59017]
+2026-08-27 15:18:39.169  INFO 11728 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 4.308 seconds (JVM running for 4.867)
+2026-08-27 15:18:44.988  INFO 11728 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 15:18:44.988  INFO 11728 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 15:18:44.994  INFO 11728 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-08-27 15:26:09.774  INFO 11728 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-08-27 15:26:10.272  INFO 11728 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-08-27 15:26:10.324  INFO 11728 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:26:10.332  INFO 11728 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 15:26:10.340  INFO 11728 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 15:26:29.257  INFO 22196 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 22196 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 15:26:29.260 DEBUG 22196 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 15:26:29.260  INFO 22196 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 15:26:29.895  INFO 22196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 15:26:29.897  INFO 22196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 15:26:29.932  INFO 22196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2026-08-27 15:26:30.642  INFO 22196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 15:26:30.656  INFO 22196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 15:26:30.656  INFO 22196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 15:26:30.739  INFO 22196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 15:26:30.740  INFO 22196 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1425 ms
+2026-08-27 15:26:31.918  INFO 22196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 15:26:32.161  INFO 22196 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 15:26:32.729  INFO 22196 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 15:26:33.226  INFO 22196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 15:26:33.566  INFO 22196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 15:26:33.568  INFO 22196 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 15:26:33.623  INFO 22196 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2ec0ca83:0/SimpleConnection@1edac3b4 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 62224]
+2026-08-27 15:26:33.677  INFO 22196 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 4.801 seconds (JVM running for 5.296)
+2026-08-27 15:26:33.794  INFO 22196 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 15:26:33.795  INFO 22196 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 15:26:33.799  INFO 22196 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-08-27 16:00:15.513  INFO 22196 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-08-27 16:00:16.063  INFO 22196 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-08-27 16:00:16.112  INFO 22196 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 16:00:16.119  INFO 22196 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 16:00:16.122  INFO 22196 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 16:12:01.297  INFO 27240 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 27240 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 16:12:01.300 DEBUG 27240 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 16:12:01.300  INFO 27240 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 16:12:02.091  INFO 27240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 16:12:02.094  INFO 27240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 16:12:02.136  INFO 27240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2026-08-27 16:12:03.059  INFO 27240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 16:12:03.075  INFO 27240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 16:12:03.075  INFO 27240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 16:12:03.172  INFO 27240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 16:12:03.173  INFO 27240 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1814 ms
+2026-08-27 16:12:04.299  INFO 27240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 16:12:04.519  INFO 27240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 16:12:05.153  INFO 27240 --- [main] com.hmdp.service.impl.ShopServiceImpl    : 商铺 GEO 数据加载完成，共 2 个类型
+2026-08-27 16:12:05.275  INFO 27240 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 16:12:05.746  INFO 27240 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 16:12:06.071  INFO 27240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 16:12:06.074  INFO 27240 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 16:12:06.123  INFO 27240 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#cf984d9:0/SimpleConnection@44c27b8b [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49226]
+2026-08-27 16:12:06.171  INFO 27240 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 5.326 seconds (JVM running for 5.777)
+2026-08-27 16:12:19.124  INFO 27240 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 16:12:19.125  INFO 27240 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 16:12:19.133  INFO 27240 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2026-08-27 21:29:08.057  INFO 19256 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 19256 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 21:29:08.059 DEBUG 19256 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 21:29:08.060  INFO 19256 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 21:29:08.755  INFO 19256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 21:29:08.758  INFO 19256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 21:29:08.793  INFO 19256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2026-08-27 21:29:09.653  INFO 19256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 21:29:09.667  INFO 19256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 21:29:09.667  INFO 19256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 21:29:09.758  INFO 19256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 21:29:09.758  INFO 19256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1644 ms
+2026-08-27 21:29:12.067  INFO 19256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 21:29:12.357  INFO 19256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 21:29:12.868  INFO 19256 --- [main] com.hmdp.service.impl.ShopServiceImpl    : 商铺 GEO 数据加载完成，共 2 个类型
+2026-08-27 21:29:12.987  INFO 19256 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 21:29:13.387  INFO 19256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 21:29:13.703  INFO 19256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 21:29:13.705  INFO 19256 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 21:29:13.753  INFO 19256 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4345fd45:0/SimpleConnection@61288814 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 49881]
+2026-08-27 21:29:13.797  INFO 19256 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 6.151 seconds (JVM running for 6.605)
+2026-08-27 21:29:22.979  INFO 19256 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 21:29:22.979  INFO 19256 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 21:29:22.985  INFO 19256 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-08-27 21:29:37.642 DEBUG 19256 --- [http-nio-8081-exec-4] com.hmdp.service.impl.UserServiceImpl    : 发送短信验证码成功,验证码为275812
+2026-08-27 21:43:03.567  INFO 19256 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-08-27 21:43:04.373  INFO 19256 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-08-27 21:43:04.486  INFO 19256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 21:43:04.514  INFO 19256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 21:43:04.520  INFO 19256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 21:44:37.679  INFO 25380 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 25380 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 21:44:37.682 DEBUG 25380 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 21:44:37.683  INFO 25380 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 21:44:38.511  INFO 25380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 21:44:38.514  INFO 25380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 21:44:38.555  INFO 25380 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2026-08-27 21:44:39.392  INFO 25380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 21:44:39.407  INFO 25380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 21:44:39.407  INFO 25380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 21:44:39.506  INFO 25380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 21:44:39.506  INFO 25380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1759 ms
+2026-08-27 21:44:40.569  INFO 25380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 21:44:40.793  INFO 25380 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 21:44:41.511  INFO 25380 --- [main] com.hmdp.service.impl.ShopServiceImpl    : 商铺 GEO 数据加载完成，共 2 个类型
+2026-08-27 21:44:41.632  INFO 25380 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 21:44:42.085  INFO 25380 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 21:44:42.410  INFO 25380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 21:44:42.413  INFO 25380 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 21:44:42.454  INFO 25380 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4c2bea52:0/SimpleConnection@6c49ea0c [delegate=amqp://guest@127.0.0.1:5672/, localPort= 56723]
+2026-08-27 21:44:42.499  INFO 25380 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 5.313 seconds (JVM running for 5.754)
+2026-08-27 21:45:42.795  INFO 25380 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 21:45:42.797  INFO 25380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 21:45:42.807  INFO 25380 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2026-08-27 21:45:56.774 DEBUG 25380 --- [http-nio-8081-exec-6] com.hmdp.service.impl.UserServiceImpl    : 发送短信验证码成功,验证码为080593
+2026-08-27 21:52:07.424  INFO 25380 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-08-27 21:52:08.321  INFO 25380 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-08-27 21:52:08.354  INFO 25380 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 21:52:08.360  INFO 25380 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 21:52:08.360  INFO 25380 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 21:54:58.961  INFO 18264 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 18264 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 21:54:58.963 DEBUG 18264 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 21:54:58.963  INFO 18264 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 21:54:59.605  INFO 18264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 21:54:59.605  INFO 18264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 21:54:59.638  INFO 18264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2026-08-27 21:55:00.406  INFO 18264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 21:55:00.422  INFO 18264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 21:55:00.423  INFO 18264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 21:55:00.505  INFO 18264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 21:55:00.505  INFO 18264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1486 ms
+2026-08-27 21:55:01.466  INFO 18264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 21:55:01.655  INFO 18264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 21:55:02.185  INFO 18264 --- [main] com.hmdp.service.impl.ShopServiceImpl    : 商铺 GEO 数据加载完成，共 2 个类型
+2026-08-27 21:55:02.299  INFO 18264 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 21:55:02.671  INFO 18264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 21:55:02.965  INFO 18264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 21:55:02.967  INFO 18264 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 21:55:03.006  INFO 18264 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4c2bea52:0/SimpleConnection@6c49ea0c [delegate=amqp://guest@127.0.0.1:5672/, localPort= 50756]
+2026-08-27 21:55:03.062  INFO 18264 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 4.493 seconds (JVM running for 5.249)
+2026-08-27 21:55:03.378  INFO 18264 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 21:55:03.378  INFO 18264 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 21:55:03.384  INFO 18264 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-08-27 21:55:17.056 DEBUG 18264 --- [http-nio-8081-exec-4] com.hmdp.service.impl.UserServiceImpl    : 发送短信验证码成功,验证码为008953
+2026-08-27 22:54:51.845  INFO 18264 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-08-27 22:54:52.091  INFO 18264 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-08-27 22:54:52.133  INFO 18264 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 22:54:52.133  INFO 18264 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 22:54:52.141  INFO 18264 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-08-27 22:56:18.732  INFO 19568 --- [main] com.hmdp.HmDianPingApplication           : Starting HmDianPingApplication on LAPTOP-5JS4CT44 with PID 19568 (D:\heimadianping\hm-dianping\target\classes started by HP in D:\heimadianping\hm-dianping)
+2026-08-27 22:56:18.735 DEBUG 19568 --- [main] com.hmdp.HmDianPingApplication           : Running with Spring Boot v2.3.12.RELEASE, Spring v5.2.15.RELEASE
+2026-08-27 22:56:18.735  INFO 19568 --- [main] com.hmdp.HmDianPingApplication           : No active profile set, falling back to default profiles: default
+2026-08-27 22:56:19.372  INFO 19568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-08-27 22:56:19.375  INFO 19568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27 22:56:19.403  INFO 19568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2026-08-27 22:56:20.086  INFO 19568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2026-08-27 22:56:20.102  INFO 19568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27 22:56:20.103  INFO 19568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2026-08-27 22:56:20.187  INFO 19568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-27 22:56:20.187  INFO 19568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1401 ms
+2026-08-27 22:56:21.668  INFO 19568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27 22:56:21.854  INFO 19568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27 22:56:24.202  INFO 19568 --- [main] com.hmdp.service.impl.ShopServiceImpl    : 商铺 GEO 数据加载完成，共 2 个类型
+2026-08-27 22:56:24.321  INFO 19568 --- [main] c.hmdp.service.impl.VoucherServiceImpl   : 秒杀库存预热完成，共1张券
+2026-08-27 22:56:24.731  INFO 19568 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2026-08-27 22:56:25.024  INFO 19568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2026-08-27 22:56:25.026  INFO 19568 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2026-08-27 22:56:25.063  INFO 19568 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#cf984d9:0/SimpleConnection@11c25846 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 64566]
+2026-08-27 22:56:25.109  INFO 19568 --- [main] com.hmdp.HmDianPingApplication           : Started HmDianPingApplication in 6.758 seconds (JVM running for 7.206)
+2026-08-27 22:56:39.337  INFO 19568 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-27 22:56:39.337  INFO 19568 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-27 22:56:39.343  INFO 19568 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-08-27 23:18:53.237  INFO 19568 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2026-08-27 23:18:53.874  INFO 19568 --- [SpringContextShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2026-08-27 23:18:53.909  INFO 19568 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2026-08-27 23:18:53.914  INFO 19568 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27 23:18:53.918  INFO 19568 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

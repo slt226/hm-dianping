@@ -1,0 +1,42 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: hmdp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    # 原教程默认连接 127.0.0.1:3306；本机使用 phpEnv 自带的 MySQL 5.7 实例，
+    # 通过命令行 --port=3307 启动，root 密码为 root，已导入 hmdp 库。
+    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  redis:
+    # 原教程指向虚拟机 192.168.150.101；本机已启动 Redis，改连本地。
+    host: 127.0.0.1
+    port: 6379
+    password: 123321
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+mybatis-plus:
+  type-aliases-package: com.hmdp.entity # 别名扫描包
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印SQL语句、参数及返回结果
+    map-underscore-to-camel-case: true # 驼峰命名自动转换
+logging:
+  level:
+    root: info
+    com.hmdp: debug # 项目包输出debug级日志
+    org.springframework: info
+  file:
+    name: logs/hmdp.log # 日志同时输出到文件
