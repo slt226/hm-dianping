@@ -37,6 +37,14 @@ public class VoucherOrderConsumer {
         Long voucherId = msg.getVoucherId();
         Long userId = msg.getUserId();
         Long orderId = msg.getOrderId();
+        //0.幂等门禁：消息可能被投递多次（网络重投 / ack丢失 / 生产端补偿 / 集群切换）。
+        //  订单已存在就直接返回，绝不能重复扣库存，更不能回滚一笔已经成功的好单。
+        //  注意：必须放在"扣库存"之前，否则副作用已经发生，再拦就晚了。
+        if (voucherOrderMapper.selectById(orderId) != null) {
+            log.info("订单已存在，忽略重复消息 | orderId={}", orderId);
+            return;
+        }
+
         //1.DB扣库存（乐观锁CAS:只有stock>0时才进行扣减）
         boolean deductOk = seckillVoucherService.update(
                 new UpdateWrapper<SeckillVoucher>()
@@ -60,22 +68,26 @@ public class VoucherOrderConsumer {
             voucherOrderMapper.insert(order);
         }
         catch(DataIntegrityViolationException dup){
-            //1.唯一索引冲突，同一用户下单
-            log.warn("唯一索引冲突，userId={}, voucherId={}", userId, voucherId);
-            //回补数据库库存
+            //2.兜底：并发下两条相同 orderId 的消息可能同时通过门禁（RR 隔离级别互相看不见对方的 insert），
+            //  主键冲突说明"别人已经把这单建好了"。此时本事务自己扣掉的那 1 张要还回去，
+            //  但绝对不能动 Redis —— 那会把一个已经下单成功的用户重新解锁，凭空多出一张券。
+            log.warn("订单已存在（并发重复），回补本次预扣 | orderId={}, userId={}, voucherId={}",
+                    orderId, userId, voucherId);
             seckillVoucherService.update(
-                    new UpdateWrapper<com.hmdp.entity.SeckillVoucher>()
+                    new UpdateWrapper<SeckillVoucher>()
                             .setSql("stock = stock + 1")
                             .eq("voucher_id", voucherId)
             );
-            //回滚数据库预扣
-            rollbackRedis(voucherId,userId);
             return;
         }
         catch(Exception e){
-            // 其他异常：回滚 Redis，抛出让 @Transactional 回滚 DB
-            log.error("创建订单异常", e);
-            rollbackRedis(voucherId, userId);
+            // 其他异常：只抛出，让 @Transactional 回滚 DB，然后交给容器的 retry 策略重试。
+            // ⚠️ 绝不能在这里回补 Redis：本地重试会重复调用本方法，回补会被放大 N 倍。
+            //    实测：失败 82 次 → Redis 库存 97 被回补到 179，闸门彻底失效。
+            //    回补统一挪到"重试彻底耗尽"之后的 SeckillDeadLetterConsumer，每条死信只补一次。
+            //    原则：宁可少卖（死信可人工补），不可超卖（DB 无货却卖出去了）。
+            log.error("创建订单异常，交由容器重试 | orderId={}, userId={}, voucherId={}",
+                    orderId, userId, voucherId, e);
             throw e;
         }
         log.info("秒杀订单创建成功，orderId={}", orderId);

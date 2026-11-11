@@ -14,6 +14,7 @@ import com.hmdp.utils.RedisConstants;
 import com.hmdp.utils.RedisIdWorker;
 import com.hmdp.utils.UserHolder;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.core.io.ClassPathResource;
@@ -26,6 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Service
@@ -89,10 +91,27 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         if (r == 2L) {
             return Result.fail("每人限抢一张");
         }
-
+        //3.生产订单号
         Long orderId=redisIdWorker.nextId("voucher-order");
         SeckillOrderMessage seckillOrderMessage = new SeckillOrderMessage(orderId,userId,voucherId);
-        rabbitTemplate.convertAndSend("seckill.exchange", "seckill.key", seckillOrderMessage);
+        //4.投递信息 +broker确认
+        CorrelationData correlationData =new CorrelationData(String.valueOf(orderId));
+        try{
+          rabbitTemplate.convertAndSend("seckill.exchange","seckill.key",seckillOrderMessage,correlationData);
+          CorrelationData.Confirm confirm=correlationData.getFuture().get(1, TimeUnit.SECONDS);
+          if(!confirm.isAck()){
+              throw new IllegalStateException("broker 拒收消息：" + confirm.getReason());
+          }
+            // ack 只代表"交换机收到了"，不代表"进了队列"。没路由到任何队列时这里非 null
+            if(correlationData.getReturnedMessage()!=null){
+                throw new IllegalStateException("消息无法路由到队列：" + correlationData.getReturnedMessage());
+            }
+        }catch (Exception e){
+            log.error("秒杀消息投递失败，回滚 Redis 预扣 | orderId={}, voucherId={}, userId={}",
+                    orderId, voucherId, userId, e);
+            rollbackRedis(voucherId, userId);
+            return Result.fail("系统繁忙，请稍后重试");
+        }
         return Result.ok(orderId);
     }
 
