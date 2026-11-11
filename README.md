@@ -4,31 +4,31 @@
 
 项目源自黑马程序员《Redis 实战篇》课程，在此基础上做了若干工程化改造（见 [二次改造](#二次改造)）。
 
-| 技术                | 版本                       |
-| ----------------- | ------------------------ |
-| JDK               | 1.8（已在 JDK 17 上实测可编译运行）  |
-| Spring Boot       | 2.3.12.RELEASE           |
-| MyBatis-Plus      | 3.4.3                    |
-| Spring Data Redis | 2.3.9（Lettuce）           |
-| RabbitMQ          | spring-boot-starter-amqp |
-| MySQL             | 5.7（驱动 5.1.47）           |
-| Hutool            | 5.7.17                   |
+| 技术 | 版本 |
+|---|---|
+| JDK | 1.8（已在 JDK 17 上实测可编译运行） |
+| Spring Boot | 2.3.12.RELEASE |
+| MyBatis-Plus | 3.4.3 |
+| Spring Data Redis | 2.3.9（Lettuce） |
+| RabbitMQ | spring-boot-starter-amqp |
+| MySQL | 5.7（驱动 5.1.47） |
+| Hutool | 5.7.17 |
 
 ---
 
 ## 功能与 Redis 结构对照
 
-| 模块    | 业务能力           | Redis 结构                 | 关键实现                         |
-| ----- | -------------- | ------------------------ | ---------------------------- |
-| 短信登录  | 验证码登录、Token 鉴权 | String                   | Redis 存登录态替代 Session，双拦截器续期  |
-| 商户缓存  | 商铺详情缓存         | String(JSON) + String(锁) | 空值缓存防穿透、互斥锁防击穿、随机 TTL 防雪崩    |
-| 优惠券秒杀 | 高并发抢券、一人一单     | String + Set + Lua       | Lua 原子预扣 → RabbitMQ 异步落库     |
-| 达人探店  | 笔记点赞、点赞榜       | ZSet                     | `ZSCORE` 判重、`ZRANGE` 取 Top5  |
-| 好友关注  | 关注/取关、共同关注     | Set                      | `SINTER` 求交集、`SCARD` 计数      |
-| 关注推送  | 关注流时间线         | ZSet                     | 推模式收件箱 + 滚动分页                |
-| 附近商户  | 按距离搜店          | GEO                      | `GEOADD` 预热、`GEORADIUS` 检索   |
-| 用户签到  | 每日签到、连续签到      | BitMap                   | `SETBIT` 写、`BITFIELD` 位运算算连续 |
-| UV 统计 | 独立访客           | HyperLogLog              | 拦截器 `PFADD`，`PFMERGE` 区间合并   |
+| 模块 | 业务能力 | Redis 结构 | 关键实现 |
+|---|---|---|---|
+| 短信登录 | 验证码登录、Token 鉴权 | String | Redis 存登录态替代 Session，双拦截器续期 |
+| 商户缓存 | 商铺详情缓存 | String(JSON) + String(锁) | 空值缓存防穿透、互斥锁防击穿、随机 TTL 防雪崩 |
+| 优惠券秒杀 | 高并发抢券、一人一单 | String + Set + Lua | Lua 原子预扣 → RabbitMQ 异步落库 |
+| 达人探店 | 笔记点赞、点赞榜 | ZSet | `ZSCORE` 判重、`ZRANGE` 取 Top5 |
+| 好友关注 | 关注/取关、共同关注 | Set | `SINTER` 求交集、`SCARD` 计数 |
+| 关注推送 | 关注流时间线 | ZSet | 推模式收件箱 + 滚动分页 |
+| 附近商户 | 按距离搜店 | GEO | `GEOADD` 预热、`GEORADIUS` 检索 |
+| 用户签到 | 每日签到、连续签到 | BitMap | `SETBIT` 写、`BITFIELD` 位运算算连续 |
+| UV 统计 | 独立访客 | HyperLogLog | 拦截器 `PFADD`，`PFMERGE` 区间合并 |
 
 ---
 
@@ -49,12 +49,12 @@
 
 ### 2. 缓存：三大问题逐个击破
 
-| 问题     | 方案                            | 实现位置                                     |
-| ------ | ----------------------------- | ---------------------------------------- |
-| 缓存穿透   | 空值缓存（TTL 2min）                | `ShopServiceImpl#queryWithPassThrough`   |
-| 缓存击穿   | 互斥锁（`SET key v NX EX`）+ 双重检查  | `ShopServiceImpl#queryWithMutex`         |
-| 缓存雪崩   | TTL + `ThreadLocalRandom` 随机值 | 同上                                       |
-| 热点 key | 逻辑过期（异步重建，不阻塞请求）              | `ShopServiceImpl#queryWithLogicalExpire` |
+| 问题 | 方案 | 实现位置 |
+|---|---|---|
+| 缓存穿透 | 空值缓存（TTL 2min） | `ShopServiceImpl#queryWithPassThrough` |
+| 缓存击穿 | 互斥锁（`SET key v NX EX`）+ 双重检查 | `ShopServiceImpl#queryWithMutex` |
+| 缓存雪崩 | TTL + `ThreadLocalRandom` 随机值 | 同上 |
+| 热点 key | 逻辑过期（异步重建，不阻塞请求） | `ShopServiceImpl#queryWithLogicalExpire` |
 
 一致性采用 Cache Aside：更新时**先改 DB 再删缓存**。反过来做会因为并发把旧值写回缓存。
 
@@ -227,42 +227,55 @@ src/main/java/com/hmdp/
 
 ## Redis Key 一览
 
-| Key                                  | 类型          | 说明                   |
-| ------------------------------------ | ----------- | -------------------- |
-| `login:code:{phone}`                 | String      | 短信验证码，TTL 2min       |
-| `login:token:{token}`                | String      | 登录态，TTL 10h          |
-| `cache:shop:{id}`                    | String      | 商铺缓存，TTL 30min + 随机  |
-| `cache:shopType:list`                | String      | 商铺类型列表               |
-| `lock:shop:{id}`                     | String      | 缓存重建互斥锁，TTL 10s      |
-| `seckill:stock:{voucherId}`          | String      | 秒杀库存                 |
-| `seckill:user:{voucherId}`           | Set         | 已抢用户（一人一单）           |
-| `icr:{prefix}:{yyyyMMdd}`            | String      | 全局 ID 序列，按天归零        |
-| `follows:{userId}` / `fans:{userId}` | Set         | 关注 / 粉丝集合            |
-| `feed:{userId}`                      | ZSet        | 关注流收件箱，score = 笔记 id |
-| `blog:liked:{blogId}`                | ZSet        | 笔记点赞用户，score = 时间戳   |
-| `shop:geo:{typeId}`                  | GEO         | 商铺坐标，按类型分组           |
-| `sign:{userId}:{yyyyMM}`             | BitMap      | 月签到位图                |
-| `uv:{yyyyMMdd}`                      | HyperLogLog | 当日独立访客               |
+| Key | 类型 | 说明 |
+|---|---|---|
+| `login:code:{phone}` | String | 短信验证码，TTL 2min |
+| `login:token:{token}` | String | 登录态，TTL 10h |
+| `cache:shop:{id}` | String | 商铺缓存，TTL 30min + 随机 |
+| `cache:shopType:list` | String | 商铺类型列表 |
+| `lock:shop:{id}` | String | 缓存重建互斥锁，TTL 10s |
+| `seckill:stock:{voucherId}` | String | 秒杀库存 |
+| `seckill:user:{voucherId}` | Set | 已抢用户（一人一单） |
+| `icr:{prefix}:{yyyyMMdd}` | String | 全局 ID 序列，按天归零 |
+| `follows:{userId}` / `fans:{userId}` | Set | 关注 / 粉丝集合 |
+| `feed:{userId}` | ZSet | 关注流收件箱，score = 笔记 id |
+| `blog:liked:{blogId}` | ZSet | 笔记点赞用户，score = 时间戳 |
+| `shop:geo:{typeId}` | GEO | 商铺坐标，按类型分组 |
+| `sign:{userId}:{yyyyMM}` | BitMap | 月签到位图 |
+| `uv:{yyyyMMdd}` | HyperLogLog | 当日独立访客 |
 
 ---
 
 ## 主要接口
 
-| 分组               | 接口                                                  | 说明             |
-| ---------------- | --------------------------------------------------- | -------------- |
-| `/user`          | `POST /code`、`POST /login`、`GET /me`                | 验证码、登录、当前用户    |
-| `/user`          | `POST /sign`、`GET /sign/count`                      | 签到、连续签到天数      |
-| `/user`          | `GET /uv/today`、`GET /uv`                           | 今日 UV、区间 UV    |
-| `/shop`          | `GET /{id}`、`GET /of/type`、`GET /of/name`           | 商铺查询（含 GEO 分页） |
-| `/shop-type`     | `GET /list`                                         | 商铺类型           |
-| `/voucher`       | `GET /list/{shopId}`、`POST /seckill`                | 优惠券列表、新增秒杀券    |
-| `/voucher-order` | `POST /seckill/{id}`                                | **秒杀下单**       |
-| `/blog`          | `POST`、`PUT /like/{id}`、`GET /of/follow`、`GET /hot` | 笔记发布、点赞、关注流    |
-| `/blog-comments` | `POST`                                              | 笔记评论           |
-| `/follow`        | `PUT /{id}/{isFollow}`、`GET /common/{id}`           | 关注取关、共同关注      |
-| `/upload`        | `POST /blog`                                        | 图片上传           |
+| 分组 | 接口 | 说明 |
+|---|---|---|
+| `/user` | `POST /code`、`POST /login`、`GET /me` | 验证码、登录、当前用户 |
+| `/user` | `POST /sign`、`GET /sign/count` | 签到、连续签到天数 |
+| `/user` | `GET /uv/today`、`GET /uv` | 今日 UV、区间 UV |
+| `/shop` | `GET /{id}`、`GET /of/type`、`GET /of/name` | 商铺查询（含 GEO 分页） |
+| `/shop-type` | `GET /list` | 商铺类型 |
+| `/voucher` | `GET /list/{shopId}`、`POST /seckill` | 优惠券列表、新增秒杀券 |
+| `/voucher-order` | `POST /seckill/{id}` | **秒杀下单** |
+| `/seckill/ops` | `GET /dead-letters`、`POST /dead-letters/{id}/replay`、`GET /queues` | **死信运维**：死信列表、人工重放、队列健康（需管理员 token） |
+| `/blog` | `POST`、`PUT /like/{id}`、`GET /of/follow`、`GET /hot` | 笔记发布、点赞、关注流 |
+| `/blog-comments` | `POST` | 笔记评论 |
+| `/follow` | `PUT /{id}/{isFollow}`、`GET /common/{id}` | 关注取关、共同关注 |
+| `/upload` | `POST /blog` | 图片上传 |
 
 除上表中登录相关、商铺浏览、优惠券浏览、`/blog/hot` 外，其余接口均需登录，请求头携带 `authorization: {token}`。
+
+---
+
+## 文档索引
+
+`docs/` 下是按「现象 → 怀疑 → 验证 → 结论」写的踩坑复盘（秒杀可靠链路 4 篇、券体系 3 篇、会员 2 篇、
+实习冲刺路线图 1 篇），入口见 **[docs/README.md](docs/README.md)**。
+
+想快速判断这个项目值不值得读，先看两篇：
+
+- [秒杀P0-04-死信落库与对账](docs/秒杀P0-04-死信落库与对账.md)：不变式 `Redis 库存 = DB 库存 − 在途预扣` 是怎么被守住的；
+- [秒杀P0-05-死信重放与告警](docs/秒杀P0-05-死信重放与告警.md)：为什么 `status=1` 的死信重放要硬拒绝。
 
 ---
 
@@ -273,6 +286,10 @@ src/main/java/com/hmdp/
 - UV 区间合并用的临时 key `uv:count` 没有设置 TTL，会残留在 Redis 中。
 - 商铺缓存重建的互斥锁用递归重试，极端并发下可能栈深，生产建议改为自旋 + 超时。
 - 秒杀库存需人工同步到 Redis（`seckill:stock:{id}`），新增秒杀券后要手动预热。
+- 秒杀入口仍有一次券信息 DB 查询（`VoucherOrderServiceImpl#seckillVoucher` 里的 `getById`），
+  压测时 `tb_seckill_voucher` 的 QPS 会等于全量请求；改进方案见
+  [docs/实习冲刺-补强路线图.md](docs/实习冲刺-补强路线图.md) 的 P0-3。
+- 队列告警目前只打日志（`SeckillQueueAlertTask`），未接入 Prometheus/Micrometer 指标。
 
 ---
 
