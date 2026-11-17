@@ -19,6 +19,10 @@ public class RedisConstants {
 
     public static final String SECKILL_STOCK_KEY = "seckill:stock:";
     public static final String SECKILL_USER_KEY = "seckill:user:";  // 秒杀一人一单用户Set前缀
+    // 秒杀券元数据（仅时间窗）缓存前缀，完整 key = seckill:meta:{voucherId}
+    public static final String SECKILL_META_KEY = "seckill:meta:";
+    // 30 分钟：券的时间窗只在建券时确定、活动前不改，最坏 30 分钟的不一致业务可接受
+    public static final Long SECKILL_META_TTL = 30L;
 
     /**
      * 死信补偿执行权标记（04）：{@code seckill:dlq:done:{orderId}}。

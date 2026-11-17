@@ -62,7 +62,8 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         }
         long userId = user.getId();
 
-        SeckillVoucher sv = seckillVoucherService.getById(voucherId);
+        // 券元数据（时间窗）走 Redis Hash 缓存，避免每个秒杀请求都打一次 MySQL
+        SeckillVoucher sv = seckillVoucherService.queryMetaById(voucherId);
         if (sv == null) {
             return Result.fail("秒杀券不存在");
         }
