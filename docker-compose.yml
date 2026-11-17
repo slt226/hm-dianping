@@ -15,20 +15,23 @@
 
 services:
   mysql:
-    image: mysql:8.0
+    image: mysql:5.7
     container_name: hmdp-mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: hmdp
       TZ: Asia/Shanghai
-    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --default-time-zone=+08:00
     ports: ["3307:3306"]
     volumes:
       - mysql-data:/var/lib/mysql
+      - ./src/main/resources/db/hmdp.sql:/docker-entrypoint-initdb.d/01-base.sql:ro
+      - ./src/main/resources/db/upgrade_v2_coupon_member_ai.sql:/docker-entrypoint-initdb.d/02-upgrade-v2.sql:ro
+      - ./db/seckill_dead_letter.sql:/docker-entrypoint-initdb.d/03-dead-letter.sql:ro
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
       interval: 5s
-      retries: 20
+      retries: 40
 
   redis:
     image: redis:6

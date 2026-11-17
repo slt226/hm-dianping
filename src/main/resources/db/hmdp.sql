@@ -17,6 +17,11 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+-- 本机脚本源自 MySQL 5.6 导出，含 '0000-00-00 00:00:00' 默认值（tb_seckill_voucher 的 begin_time / end_time），
+-- 5.7+ 严格模式下会被 NO_ZERO_DATE 拒绝，容器初始化会失败。清空会话级 sql_mode 放行。
+-- 注意用 SESSION 而不是 GLOBAL：GLOBAL 需要 SUPER 权限，且对当前会话不生效，设了也白设。
+SET SESSION sql_mode = '';
+
 -- ----------------------------
 -- Table structure for tb_blog
 -- ----------------------------
