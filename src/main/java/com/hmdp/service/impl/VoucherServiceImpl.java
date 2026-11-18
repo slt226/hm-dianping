@@ -47,7 +47,8 @@ public class VoucherServiceImpl extends ServiceImpl<VoucherMapper, Voucher> impl
             }
             for (SeckillVoucher v : vouchers) {
                 String key = RedisConstants.SECKILL_STOCK_KEY + v.getVoucherId();
-                stringRedisTemplate.opsForValue().set(key, String.valueOf(v.getStock()));
+                stringRedisTemplate.opsForValue().setIfAbsent(key, String.valueOf(v.getStock()));
+                seckillVoucherService.warmMeta(v);
             }
             log.info("秒杀库存预热完成，共{}张券", vouchers.size());
         } catch (Exception e) {

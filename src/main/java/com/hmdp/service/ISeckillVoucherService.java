@@ -23,4 +23,5 @@ public interface ISeckillVoucherService extends IService<SeckillVoucher> {
      * @return 券存在则返回；不存在返回 null
      */
     SeckillVoucher queryMetaById(Long voucherId);
+    void warmMeta(SeckillVoucher sv);
 }

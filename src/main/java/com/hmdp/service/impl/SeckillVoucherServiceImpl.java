@@ -67,20 +67,7 @@ public class SeckillVoucherServiceImpl extends ServiceImpl<SeckillVoucherMapper,
         }
 
         // 4. 回填缓存：一次 putAll，不要多次 put，否则中途失败会留下半截数据
-        Map<String, String> meta = new HashMap<>(4);
-        if (sv.getBeginTime() != null) {
-            meta.put(FIELD_BEGIN_TIME, toEpochStr(sv.getBeginTime()));
-        }
-        if (sv.getEndTime() != null) {
-            meta.put(FIELD_END_TIME, toEpochStr(sv.getEndTime()));
-        }
-        // 两个字段都为 null 时 meta 是空 Map，putAll 会发出没有 field 的 HMSET，
-        // Redis 报 "wrong number of arguments"。本表两列都是 NOT NULL，这里只是兜底
-        if (!meta.isEmpty()) {
-            stringRedisTemplate.opsForHash().putAll(key, meta);
-            stringRedisTemplate.expire(key, SECKILL_META_TTL, TimeUnit.MINUTES);
-        }
-
+        warmMeta(sv);
         // 5. 两条路径返回同一形状的对象：只保证 voucherId / beginTime / endTime 有值
         return buildMeta(voucherId, sv.getBeginTime(), sv.getEndTime());
     }
@@ -101,5 +88,24 @@ public class SeckillVoucherServiceImpl extends ServiceImpl<SeckillVoucherMapper,
             return null;
         }
         return LocalDateTime.ofEpochSecond(Long.parseLong(epochSecond), 0, META_ZONE);
+    }
+    @Override
+    public void warmMeta(SeckillVoucher sv) {
+        if (sv == null) {
+            return;
+        }
+        String key = SECKILL_META_KEY + sv.getVoucherId();
+        Map<String, String> meta = new HashMap<>(4);
+        if (sv.getBeginTime() != null) {
+            meta.put(FIELD_BEGIN_TIME, toEpochStr(sv.getBeginTime()));
+        }
+        if (sv.getEndTime() != null) {
+            meta.put(FIELD_END_TIME, toEpochStr(sv.getEndTime()));
+        }
+        if (meta.isEmpty()) {
+            return;
+        }
+        stringRedisTemplate.opsForHash().putAll(key, meta);
+        stringRedisTemplate.expire(key, SECKILL_META_TTL, TimeUnit.MINUTES);
     }
 }
