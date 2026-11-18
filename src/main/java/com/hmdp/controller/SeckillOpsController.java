@@ -6,6 +6,7 @@ import com.hmdp.monitor.QueueAlertJudge;
 import com.hmdp.monitor.QueueProbe;
 import com.hmdp.monitor.SeckillQueues;
 import com.hmdp.service.ISeckillDeadLetterService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.validation.constraints.Min;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +30,7 @@ import java.util.List;
  * 在 {@code MvcConfig} 里注册到 {@code /seckill/ops/**}</strong>；未登录/非管理员直接 403，
  * 所以方法体里不再重复判空 —— 重放会动库存，这道闸必须只有一个明确的实现。
  */
+@Validated
 @RestController
 @RequestMapping("/seckill/ops")
 public class SeckillOpsController {
@@ -69,7 +72,7 @@ public class SeckillOpsController {
      * 明确告诉调用方"这次到底有没有动库存"。
      */
     @PostMapping("/dead-letters/{id}/replay")
-    public Result replay(@PathVariable Long id) {
+    public Result replay(@PathVariable @Min(value = 1, message = "必须大于 0") Long id) {
         return Result.ok(deadLetterService.replay(id));
     }
 
