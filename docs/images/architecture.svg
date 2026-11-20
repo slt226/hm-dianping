@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="560" viewBox="0 0 920 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5b6b7f"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="920" height="560" fill="#ffffff"/>
+
+  <text x="30" y="34" font-size="17" font-weight="700" fill="#1f2d3d">黑马点评 · 秒杀链路架构</text>
+  <text x="30" y="55" font-size="12" fill="#5b6b7f">Redis 原子预扣 → RabbitMQ 削峰 → 消费端幂等落库；失败进死信可重放；traceId 贯穿全链路</text>
+
+  <!-- 客户端 -->
+  <rect x="30" y="90" width="130" height="70" rx="8" fill="#eef4fb" stroke="#2f6fb2" stroke-width="1.4"/>
+  <text x="95" y="118" font-size="13" font-weight="600" fill="#1f2d3d" text-anchor="middle">客户端</text>
+  <text x="95" y="138" font-size="11" fill="#5b6b7f" text-anchor="middle">前端 / JMeter</text>
+
+  <!-- 应用层大框 -->
+  <rect x="200" y="78" width="380" height="300" rx="10" fill="#fbfcfe" stroke="#b9c6d6" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="215" y="98" font-size="12" font-weight="700" fill="#2f6fb2">Spring Boot 应用</text>
+
+  <rect x="220" y="110" width="340" height="46" rx="6" fill="#ffffff" stroke="#b9c6d6"/>
+  <text x="235" y="129" font-size="12" font-weight="600" fill="#1f2d3d">拦截器链（order 0/1/2）</text>
+  <text x="235" y="146" font-size="11" fill="#5b6b7f">Refresh Token 续期 → Login 401 → Admin 403</text>
+
+  <rect x="220" y="168" width="340" height="40" rx="6" fill="#ffffff" stroke="#b9c6d6"/>
+  <text x="235" y="193" font-size="12" font-weight="600" fill="#1f2d3d">Controller · 参数校验 + 统一错误码</text>
+
+  <rect x="220" y="220" width="340" height="56" rx="6" fill="#fff8e8" stroke="#d68910"/>
+  <text x="235" y="240" font-size="12" font-weight="600" fill="#1f2d3d">Service · Lua 原子预扣（库存 + 一人一单）</text>
+  <text x="235" y="258" font-size="11" fill="#5b6b7f">校验时间窗（meta 缓存）→ 预扣 → 投递消息</text>
+  <text x="235" y="271" font-size="11" fill="#5b6b7f">投递失败立即回滚 Redis，不留悬挂库存</text>
+
+  <rect x="220" y="290" width="340" height="74" rx="6" fill="#eefaf1" stroke="#1e8449"/>
+  <text x="235" y="310" font-size="12" font-weight="600" fill="#1f2d3d">消费者 · 幂等落库</text>
+  <text x="235" y="327" font-size="11" fill="#5b6b7f">selectById 门禁 → DB 扣库存 → 插订单</text>
+  <text x="235" y="343" font-size="11" fill="#5b6b7f">唯一索引兜底回补库存；重试 3 次后进死信</text>
+  <text x="235" y="358" font-size="11" fill="#5b6b7f">@RabbitListener(concurrency=2, prefetch=1)</text>
+
+  <!-- Redis -->
+  <rect x="640" y="90" width="250" height="126" rx="8" fill="#fdeeee" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="656" y="110" font-size="12" font-weight="700" fill="#922b21">Redis（内存，请求链路唯一依赖）</text>
+  <text x="656" y="130" font-size="11" fill="#3d2b28">seckill:stock:{id}    剩余库存</text>
+  <text x="656" y="148" font-size="11" fill="#3d2b28">seckill:user:{id}     已购集合 (Set)</text>
+  <text x="656" y="166" font-size="11" fill="#3d2b28">seckill:meta:{id}     时间窗 (Hash)</text>
+  <text x="656" y="184" font-size="11" fill="#3d2b28">login:token:{token}  登录态</text>
+  <text x="656" y="202" font-size="11" fill="#3d2b28">admin:token:{token}  运维令牌</text>
+
+  <!-- RabbitMQ -->
+  <rect x="640" y="234" width="250" height="94" rx="8" fill="#fff4e5" stroke="#d68910" stroke-width="1.4"/>
+  <text x="656" y="254" font-size="12" font-weight="700" fill="#8a5a08">RabbitMQ（削峰）</text>
+  <text x="656" y="274" font-size="11" fill="#3d2b28">seckill.exchange → seckill.queue</text>
+  <text x="656" y="292" font-size="11" fill="#3d2b28">publisher-confirm: correlated</text>
+  <text x="656" y="310" font-size="11" fill="#3d2b28">消费失败 → seckill.dlq（可重放）</text>
+
+  <!-- MySQL -->
+  <rect x="640" y="346" width="250" height="96" rx="8" fill="#eef4fb" stroke="#2f6fb2" stroke-width="1.4"/>
+  <text x="656" y="366" font-size="12" font-weight="700" fill="#1f4e79">MySQL（权威账本）</text>
+  <text x="656" y="386" font-size="11" fill="#3d2b28">tb_seckill_voucher   库存副本</text>
+  <text x="656" y="404" font-size="11" fill="#3d2b28">tb_voucher_order     订单</text>
+  <text x="656" y="422" font-size="11" fill="#3d2b28">tb_seckill_dead_letter 死信</text>
+
+  <!-- 连线 -->
+  <line x1="160" y1="125" x2="216" y2="133" stroke="#5b6b7f" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <line x1="560" y1="248" x2="636" y2="150" stroke="#c0392b" stroke-width="1.6" marker-end="url(#arrowRed)"/>
+  <text x="566" y="212" font-size="10" fill="#c0392b">Lua 原子执行</text>
+
+  <line x1="560" y1="246" x2="636" y2="270" stroke="#d68910" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="566" y="286" font-size="10" fill="#8a5a08">投递订单消息</text>
+
+  <line x1="640" y1="306" x2="564" y2="324" stroke="#1e8449" stroke-width="1.6" marker-end="url(#arrowGreen)"/>
+  <text x="568" y="344" font-size="10" fill="#1e8449">异步消费</text>
+
+  <line x1="560" y1="340" x2="636" y2="392" stroke="#2f6fb2" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="566" y="380" font-size="10" fill="#1f4e79">幂等落库</text>
+
+  <!-- 观测层 -->
+  <rect x="30" y="440" width="860" height="86" rx="8" fill="#f6f7f9" stroke="#b9c6d6"/>
+  <text x="46" y="462" font-size="12" font-weight="700" fill="#1f2d3d">可观测与运维</text>
+  <text x="46" y="484" font-size="11" fill="#3d2b28">· traceId：HTTP 入口生成 → 消息 header 透传 → 消费端复原，一条命令捞出「入队 + 落库」两段日志</text>
+  <text x="46" y="502" font-size="11" fill="#3d2b28">· Actuator / Prometheus：http_server_requests_seconds_count{status="5xx"} 是判断真实故障的唯一指标</text>
+  <text x="46" y="520" font-size="11" fill="#3d2b28">· 死信运维接口：列表 / 重放（分布式锁 + Lua 解锁），重放会改库存，故用独立 admin 令牌鉴权</text>
+</svg>
