@@ -1,8 +1,25 @@
 # 黑马点评（hm-dianping）
 
-一个基于 Spring Boot + Redis 的本地生活服务平台（类大众点评），涵盖短信登录、商户缓存、优惠券秒杀、达人探店、好友关注、Feed 流、附近商户、用户签到、UV 统计九大模块。
+**一句话**：Spring Boot + Redis + RabbitMQ 的本地生活平台，秒杀链路按「Redis 原子预扣 → MQ 削峰 → 消费端幂等落库 → 死信可重放」做完整闭环，并补齐了统一错误码、链路追踪与压测数据。
 
-项目源自黑马程序员《Redis 实战篇》课程，在此基础上做了若干工程化改造（见 [二次改造](#二次改造)）。
+三条能直接验证的工程结论：
+
+- **不超卖、不少卖**：1000 并发抢 100 张券，落库 100 单、DB 剩余 0、死信 0，`stock + orders = 初始库存` 每一轮都成立（[压测报告](docs/压测报告.md)）
+- **请求线程零 SQL**：1000 单成交，HTTP 线程只做 Redis Lua + MQ 投递；所有 DB 写发生在消费线程（P50 10ms / P99 253ms，DB 直扣对照 P50 286ms / P99 719ms）
+- **故障可追**：traceId 从 HTTP 入口透传到 MQ 消息头再由消费端复原，一次请求的「入队 + 落库」两段日志可被同一条命令捞出；`/actuator/prometheus` 暴露 5xx 指标
+
+![架构](docs/images/architecture.svg)
+
+## 快速开始
+
+```bash
+docker compose up -d          # MySQL 5.7 + Redis + RabbitMQ，自动导入 24 张表与种子数据
+mvn spring-boot:run           # http://localhost:8081
+```
+
+压测（可选）：`.\db\reset_seckill.ps1 -Stock 100 -Reopen -Hours 2` 重置数据 → `.\db\gen_tokens.ps1` 生成千人登录态 → `jmeter -n -t test/jmeter/seckill.jmx -Jthreads=1000`。
+
+> 本地默认口令（MySQL `root/root`、Redis `123321`）仅为开发便利，生产环境全部走环境变量 `DB_*` / `REDIS_*` / `MQ_*` 覆盖。
 
 | 技术 | 版本 |
 |---|---|
