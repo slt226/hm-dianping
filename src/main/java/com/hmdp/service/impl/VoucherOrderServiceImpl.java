@@ -12,8 +12,10 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmdp.utils.RedisConstants;
 import com.hmdp.utils.RedisIdWorker;
+import com.hmdp.utils.TraceIds;
 import com.hmdp.utils.UserHolder;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -97,8 +99,17 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         SeckillOrderMessage seckillOrderMessage = new SeckillOrderMessage(orderId,userId,voucherId);
         //4.投递信息 +broker确认
         CorrelationData correlationData =new CorrelationData(String.valueOf(orderId));
+        // traceId 跨线程传递（任务 6）：MDC 是 ThreadLocal，消费者在另一个线程，
+        // 只能靠消息头把它带过去。没有这一步，"生产→消费"两段日志永远串不起来。
+        MessagePostProcessor traceIdHeader = message -> {
+            String traceId = TraceIds.current();
+            if (traceId != null) {
+                message.getMessageProperties().setHeader(TraceIds.MQ_HEADER, traceId);
+            }
+            return message;
+        };
         try{
-          rabbitTemplate.convertAndSend("seckill.exchange","seckill.key",seckillOrderMessage,correlationData);
+          rabbitTemplate.convertAndSend("seckill.exchange","seckill.key",seckillOrderMessage,traceIdHeader,correlationData);
           CorrelationData.Confirm confirm=correlationData.getFuture().get(1, TimeUnit.SECONDS);
           if(!confirm.isAck()){
               throw new IllegalStateException("broker 拒收消息：" + confirm.getReason());

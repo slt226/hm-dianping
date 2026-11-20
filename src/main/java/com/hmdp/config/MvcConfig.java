@@ -53,11 +53,17 @@ public class MvcConfig implements WebMvcConfigurer {
                         // Spring Boot 的 404 会内部转发到 /error，不排除的话
                         // "路径不存在"会被 LoginInterceptor 伪装成 401，排查时极易被带偏
                         "/error",
+                        // 可观测端点（任务 6）：health/prometheus 必须能在未登录状态被抓取。
+                        // 不排除的话 Prometheus 抓到的永远是 401，而应用侧看不出任何异常 ——
+                        // 监控"没数据"比"报错"难查得多。
+                        "/actuator/**",
                         // 博客热门列表（公开，首页展示）
                         "/blog/hot"
                 )
                 .order(1);
-        registry.addInterceptor(new AdminInterceptor())
+        // 管理端鉴权（任务 6）：改为校验独立的运维令牌，不再认 userId == 1。
+        // 这里把 Redis 显式传进去 —— 拦截器是 new 出来的，不是 Bean，注入不进来。
+        registry.addInterceptor(new AdminInterceptor(stringRedisTemplate))
                 .addPathPatterns("/coupon/template", "/member/growth/earn")
                 // 秒杀运维入口（05）：重放会直接改库存，必须只有管理员能调
                 .addPathPatterns("/seckill/ops/**")

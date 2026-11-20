@@ -45,4 +45,10 @@ logs/
 # 压测用的登录 token 文件（每行一个用户的登录态，等同密码，绝不能入库）
 tokens.txt
 
+# 压测产物：可再生成，且体积大（每个 HTML 报告约 3MB、每份 jtl 约 150KB）。
+# 报告结论已摘进 docs/压测报告.md；需要原始数据时按报告第 7 节重跑即可。
+test/jmeter/users.csv
+test/jmeter/result-*.jtl
+test/jmeter/report-*/
+
 

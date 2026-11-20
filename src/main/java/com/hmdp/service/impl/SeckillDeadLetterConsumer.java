@@ -2,6 +2,7 @@ package com.hmdp.service.impl;
 
 import com.hmdp.dto.SeckillOrderMessage;
 import com.hmdp.service.ISeckillDeadLetterService;
+import com.hmdp.utils.TraceIds;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
@@ -36,15 +37,23 @@ public class SeckillDeadLetterConsumer {
 
     @RabbitListener(queues = "seckill.dlq")
     public void handleDeadLetter(SeckillOrderMessage msg, Message rawMessage) {
-        // error 级别：死信=需要人来看，必须是告警级别，不能被 info 淹没
-        String reason = describe(rawMessage.getMessageProperties());
-        log.error("【死信告警】秒杀订单重试耗尽，进入死信队列 | orderId={}, userId={}, voucherId={}, {}",
-                msg.getOrderId(), msg.getUserId(), msg.getVoucherId(), reason);
-        // 原始报文：Jackson 反序列化会丢掉未知字段/格式细节，重放必须用原文
-        String payload = rawMessage.getBody() == null
-                ? null
-                : new String(rawMessage.getBody(), StandardCharsets.UTF_8);
-        deadLetterService.handle(msg, payload, reason);
+        // traceId 三段串联（任务 6）：生产 → 消费 → 死信。消息在进死信时 header 会被 broker 保留，
+        // 所以这里取到的仍是用户下单那一刻的 traceId，一次下单的三段日志能按同一个 id 全部捞出来。
+        Object header = rawMessage.getMessageProperties().getHeaders().get(TraceIds.MQ_HEADER);
+        TraceIds.put(header == null ? TraceIds.generate() : String.valueOf(header));
+        try {
+            // error 级别：死信=需要人来看，必须是告警级别，不能被 info 淹没
+            String reason = describe(rawMessage.getMessageProperties());
+            log.error("【死信告警】秒杀订单重试耗尽，进入死信队列 | orderId={}, userId={}, voucherId={}, {}",
+                    msg.getOrderId(), msg.getUserId(), msg.getVoucherId(), reason);
+            // 原始报文：Jackson 反序列化会丢掉未知字段/格式细节，重放必须用原文
+            String payload = rawMessage.getBody() == null
+                    ? null
+                    : new String(rawMessage.getBody(), StandardCharsets.UTF_8);
+            deadLetterService.handle(msg, payload, reason);
+        } finally {
+            TraceIds.clear();
+        }
     }
 
     /**

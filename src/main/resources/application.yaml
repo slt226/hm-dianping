@@ -51,6 +51,25 @@ logging:
     org.springframework: info
   file:
     name: logs/hmdp.log # 日志同时输出到文件
+  # traceId 全链路（任务 6）：%X{traceId:-} 从 MDC 取值，没有则显示空。
+  # 不新建 logback-spring.xml 是有意的——只需要改 pattern，没必要接管整套日志配置；
+  # 代价是控制台的颜色高亮没了（%clr 是 Boot 默认 pattern 里带的）。
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level [%X{traceId:-}] %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{traceId:-}] [%thread] %logger{40} - %msg%n"
+
+# 可观测性（任务 6）：
+# Boot 2.3 默认只暴露 /actuator/health 和 /actuator/info，metrics/prometheus 必须显式打开。
+# 注意 /actuator/** 已加入 MvcConfig 里 LoginInterceptor 的排除列表，
+# 否则这里配得再对，访问到的也是 401。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always # 本地演示用；生产应设为 when-authorized，避免暴露组件明细
 
 # 秒杀队列告警（05）。四个数字都不写死在代码里，因为它们全是"运维口径"：
 # 阈值定多少取决于队列平时的水位；改一次就要重新打包，这是唯一正确的取舍。

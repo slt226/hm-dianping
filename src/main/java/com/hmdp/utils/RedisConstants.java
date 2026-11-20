@@ -48,6 +48,15 @@ public class RedisConstants {
      */
     public static final String SECKILL_DLQ_REPLAY_LOCK_KEY = "lock:seckill:dlq:replay:";
 
+    /**
+     * 管理端独立令牌（任务 6）：{@code admin:token:{token}}，值任意，存在即视为有效。
+     * <p>
+     * 为什么不复用用户登录态：{@code /seckill/ops/**} 里的重放会直接改库存，
+     * 一旦"能变成 userId=1"就能调运维接口，等于把写库存的权限挂在用户体系上。
+     * 独立前缀 + 独立 TTL 之后，运维令牌泄露的爆炸半径与用户体系完全隔离。
+     */
+    public static final String ADMIN_TOKEN_KEY = "admin:token:";
+
     public static final String BLOG_LIKED_KEY = "blog:liked:";
     public static final String FEED_KEY = "feed:";
     public static final String SHOP_GEO_KEY = "shop:geo:";

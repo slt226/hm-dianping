@@ -26,9 +26,9 @@ import java.util.List;
  * 前者是"用户下单"，后者是"值班的人止血"，两类调用者的权限、频率、出错后果都不同。
  * 混在一起，将来给用户接口放行时很容易把重放接口一起放出去。
  * <p>
- * <strong>权限走 {@code AdminInterceptor}（userId 必须等于 {@link com.hmdp.utils.AdminConst#ADMIN_ID}），
- * 在 {@code MvcConfig} 里注册到 {@code /seckill/ops/**}</strong>；未登录/非管理员直接 403，
- * 所以方法体里不再重复判空 —— 重放会动库存，这道闸必须只有一个明确的实现。
+ * <strong>权限走 {@code AdminInterceptor}（校验独立的运维令牌 {@code X-Admin-Token}，
+ * 令牌存在性以 Redis {@code admin:token:*} 为准），在 {@code MvcConfig} 里注册到 {@code /seckill/ops/**}</strong>；
+ * 令牌缺失/失效直接 403，所以方法体里不再重复判空 —— 重放会动库存，这道闸必须只有一个明确的实现。
  */
 @Validated
 @RestController
